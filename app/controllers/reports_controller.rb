@@ -4,16 +4,10 @@ class ReportsController < ApplicationController
     @hits = []
 
     if @assembly.nil?
-      render nothing: true
+      render plain: "Please specify Assembly name in the paramters."
     else
-      @assembly.sequences.each do |s|
-        s.genes.each do |g|
-          g.hits.each do |h|
-            @hits << h
-          end
-        end
-        @hits.sort! {|a, b| b.percent_similarity <=> a.percent_similarity}
-      end
+      @hits = @assembly.hits.to_a
     end
+    @hits.sort! {|a, b| b.percent_similarity <=> a.percent_similarity}
   end
 end
