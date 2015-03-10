@@ -17,3 +17,9 @@
 ## Data
 **Database size:** 570 MB
 **Development.log size** 1.47 GB
+
+## Final thoughts
+The large log size could be mitigated by following a log rotation strategy, as detailed here:
+http://www.tommyblue.it/2014/04/11/how-to-logrotate-rails-logs/
+
+This seems to be a medium sized database; this is the size of database that medium to medium-large businesses might have. An enterprise level database would be much larger.
