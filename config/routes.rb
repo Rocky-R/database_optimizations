@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
   get 'reports/all_data'
+  post 'reports/send_mail'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'reports#all_data'
+  root 'reports#email_notification'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

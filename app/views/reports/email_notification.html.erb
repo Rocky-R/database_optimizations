@@ -1,0 +1,7 @@
+<h1>Enter your email address</h1>
+<p>and you'll receive and email with the requested report.</p>
+
+<%= form_tag reports_send_mail_path do %>
+  <p>Address: <%= email_field_tag :address %></p>
+  <%= submit_tag "Send email" %>
+<% end %>
